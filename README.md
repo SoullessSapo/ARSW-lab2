@@ -1,28 +1,27 @@
-# 📊 LOC Counter - Contador de Líneas de Código en Java
+## 🧪 Pruebas unitarias
 
-Este proyecto es una herramienta de línea de comandos que permite contar líneas de código fuente en archivos `.java`, ya sea líneas **físicas** o líneas de código reales (excluyendo comentarios y líneas en blanco).
+Se desarrollaron pruebas unitarias con **JUnit 5** para verificar el funcionamiento correcto del conteo de líneas físicas y lógicas usando archivos temporales.
 
----
+### Archivos de prueba: `LineCounterTest.java`
 
-## 🛠 Tecnologías utilizadas
+Ubicación:  
+`src/test/java/org/example/linecounter/LineCounterTest.java`
 
-- Java 17
-- Maven
-- Git & GitHub
-- JUnit 5 (para pruebas)
-- Estilo de código: [Guía de estilo de Google para Java](https://google.github.io/styleguide/javaguide.html)
+### Cobertura de pruebas:
 
----
+| Test                               | Propósito                                                            |
+|------------------------------------|----------------------------------------------------------------------|
+| `testCountPhysicalLines()`         | Verifica que cuente todas las líneas (incluyendo comentarios y vacías). |
+| `testCountLogicalLines()`          | Verifica que cuente solo líneas de código reales.                   |
+| `testEmptyFile()`                  | Verifica que un archivo vacío retorne 0 líneas.                     |
+| `testCommentsOnly()`               | Verifica que comentarios y líneas vacías no se cuenten como LOC.    |
 
-## 🚀 Ejecución del programa
+### Ejecución de las pruebas
 
-### Requisitos
+Desde IntelliJ:
+- Haz clic derecho en la clase `LineCounterTest` → **Run 'LineCounterTest'**
 
-- Tener instalado Maven y Java 17+
-- Tener los archivos `.java` que deseas analizar
-
-### Comando de ejemplo
+Desde consola:
 
 ```bash
-mvn compile
-mvn exec:java "-Dexec.mainClass=org.example.linecounter.LineCounterApplication" "-Dexec.args=loc src/main/java/org/example/linecounter/LineCounter.java"
+mvn test
