@@ -25,3 +25,10 @@ Desde consola:
 
 ```bash
 mvn test
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.example.linecounter.LineCounterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 s - in org.example.linecounter.LineCounterTest
+[INFO] 
+[INFO] BUILD SUCCESS
